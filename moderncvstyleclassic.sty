@@ -71,7 +71,7 @@
 
 % commands
 \renewcommand*{\recomputecvlengths}{%
-  \setlength{\quotewidth}{0.65\textwidth}%
+  \setlength{\quotewidth}{0.9\textwidth}%
   % main lenghts
   \setlength{\maincolumnwidth}{\textwidth-\separatorcolumnwidth-\hintscolumnwidth}%
   % listitem lengths
@@ -134,17 +134,17 @@
     {}%
   \begin{minipage}[b]{\makecvtitlenamewidth}%
     \namestyle{\@firstname\ \@lastname}%
-    \ifthenelse{\equal{\@title}{}}{}{\\[1.25em]\titlestyle{\@title}}%
+    \ifthenelse{\equal{\@title}{}}{}{\\[0.1em]\titlestyle{\@title}}%
   \end{minipage}%
   \hfill%
   % optional detailed information (rendering)
   \llap{\usebox{\makecvtitledetailsbox}}% \llap is used to suppress the width of the box, allowing overlap if the value of makecvtitlenamewidth is forced
   % optional photo (rendering)
-  \usebox{\makecvtitlepicturebox}\\[2.5em]%
+  \usebox{\makecvtitlepicturebox}\\[0.1em]%
   % optional quote
   \ifthenelse{\isundefined{\@quote}}%
     {}%
-    {{\centering\begin{minipage}{\quotewidth}\centering\quotestyle{\@quote}\end{minipage}\\[2.5em]}}%
+    {{\begin{minipage}{\quotewidth}{\@quote}\end{minipage}\\[1em]}}%
   \par}% to avoid weird spacing bug at the first section if no blank line is left after \makecvtitle
 
 \newlength{\baseletterheight}
